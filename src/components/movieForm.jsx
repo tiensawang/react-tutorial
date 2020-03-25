@@ -28,14 +28,13 @@ class MovieForm extends Form {
       .min(0)
       .max(100)
       .label("Number in Stock"),
-    dailyRentalrate: Joi.number()
+    dailyRentalRate: Joi.number()
       .required()
       .min(0)
       .max(10)
       .label("Daily Rental Rate")
   };
-  componentDidmount() {
-    // ...
+  componentDidMount() {
     const genres = getGenres();
     this.setState({ genres });
 
